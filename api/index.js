@@ -21,5 +21,6 @@ app.listen(PORT, () => {
   console.log(`API URL: http://localhost:${PORT}`);
 });
 
+console.log('Starting serverless function...');
 
 module.exports.handler = serverless(app);
