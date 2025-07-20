@@ -16,11 +16,7 @@ app.get('/', (req, res) => {
   res.send('API connected to MongoDB Atlas!');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port: ${PORT}`);
-  console.log(`API URL: http://localhost:${PORT}`);
-});
-
 console.log('Starting serverless function...');
 
+module.exports = app;
 module.exports.handler = serverless(app);
